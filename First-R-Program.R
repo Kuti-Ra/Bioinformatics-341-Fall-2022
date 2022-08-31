@@ -7,4 +7,18 @@ if (!require("BiocManager", quietly = TRUE))
 BiocManager::install("affy")
 
 #Load the package affy
-librayr(affy)
+library(affy)
+
+# Read CEL microarray files in R using library affy
+
+# Setting the working directory
+setwd("/Users/crypt/Music/mmmn")
+
+#Read the CEL files from current working directory 
+eset <- ReadAffy()
+
+#Extracting expression values using following function
+rma <- exprs(eset)
+
+#Boxplot to view the expression of samples
+boxplot(rma)
