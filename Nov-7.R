@@ -18,5 +18,9 @@ text.string <- "(((((((cow, pig),whale),(bat,(lemur,human))),(robin,iguana)),coe
 vert.tree<-read.tree(text=text.string)
 
 # Write tree date to .txt file
-write.tree(vert.tree,file="example.txt"
+write.tree(vert.tree,file="example.txt")
+
+# Reading the exported data
+Data <- read.table("example.txt", header = False, sep = "", dec = ".")
+Data
 
